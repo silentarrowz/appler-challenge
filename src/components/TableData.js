@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './table.css';
 class TableData extends Component{
   render(){
     
@@ -9,12 +9,13 @@ class TableData extends Component{
       if(searchTerm.length>0){
        
         if(x.name.toLowerCase().indexOf(searchTerm)!==-1){
-         return <li><img src={x.image}/>  {x.name}</li>
+         return <li><div className="lists"><img src={x.image}/>
+         {x.name}</div><hr/></li>;
       }else{
         return null;
          }
       }
-      return <li><img src={x.image}/> {x.name} </li>;
+      return <li><div className="lists"><img src={x.image}/> {x.name}</div><hr/> </li>;
       
     });
     
